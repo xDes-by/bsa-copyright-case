@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boss Survival Adventure (BSA) vs Quest RPG Adventure</title>
+  <meta name="description" content="A copyright infringement case with a side-by-side screenshot comparison">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --paper: #F1F0EC;
+      --card: #FFFFFF;
+      --ink: #1C1E1B;
+      --ink-soft: #63665F;
+      --original: #3A5A78;
+      /* color tag for "original" */
+      --copy: #B4472C;
+      /* color tag for "copy" — alert accent */
+      --line: #D8D6CE;
+      --radius: 2px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- header ---------- */
+
+    header.hero {
+      padding: 80px 0 48px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .case-id {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--copy);
+      margin: 0 0 18px;
+    }
+
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: clamp(32px, 5.2vw, 48px);
+      line-height: 1.08;
+      margin: 0 0 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .tagline {
+      font-size: 17px;
+      color: var(--ink-soft);
+      max-width: 60ch;
+      margin: 0;
+    }
+
+    /* ---------- timeline / meta strip ---------- */
+
+    .meta-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 32px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+    }
+
+    .meta-strip div {
+      color: var(--ink-soft);
+    }
+
+    .meta-strip strong {
+      display: block;
+      color: var(--ink);
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    /* ---------- sections ---------- */
+
+    section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin: 0 0 20px;
+    }
+
+    .section-label::before {
+      content: "";
+      width: 18px;
+      height: 1px;
+      background: var(--copy);
+      display: inline-block;
+    }
+
+    h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 26px;
+      margin: 0 0 16px;
+    }
+
+    h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 19px;
+      margin: 0 0 10px;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--ink);
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul.evidence-list {
+      margin: 0 0 14px;
+      padding-left: 20px;
+    }
+
+    ul.evidence-list li {
+      margin-bottom: 6px;
+    }
+
+    /* ---------- comparison block ---------- */
+
+    .case {
+      margin-bottom: 48px;
+    }
+
+    .case:last-child {
+      margin-bottom: 0;
+    }
+
+    .case-title {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .case-note {
+      font-size: 14px;
+      color: var(--ink-soft);
+      max-width: 60ch;
+    }
+
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .compare figure {
+      margin: 0;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      transition: overflow 0s linear .4s;
+      /* overflow switches back only after zoom-out finishes */
+    }
+
+    .compare figure:hover {
+      overflow: visible;
+      z-index: 50;
+      transition-delay: 0s;
+      /* overflow opens immediately on hover-in */
+    }
+
+    .compare img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+      border-bottom: 1px solid var(--line);
+      cursor: zoom-in;
+      transform-origin: center center;
+      transition: transform .45s cubic-bezier(.22, .8, .28, 1), object-fit 0s;
+    }
+
+    .compare figcaption {
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 2px;
+      font-size: 10px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .tag.original {
+      background: var(--original);
+    }
+
+    .tag.copy {
+      background: var(--copy);
+    }
+
+    .compare figcaption span.date {
+      color: var(--ink-soft);
+      margin-left: auto;
+    }
+
+    /* ---------- hover zoom: enlarges in place, no cropping, no jumping ---------- */
+    /* The image grows around its own center — the cursor always stays over it,
+       so hovering never breaks and nothing flickers. The rest of the page
+       remains reachable by the mouse; there's no full-screen dimming. */
+
+    .compare figure:hover img {
+      transform: scale(2.15);
+      object-fit: contain;
+      background: var(--card);
+      box-shadow: 0 18px 46px rgba(0, 0, 0, .32);
+      border-radius: 4px;
+      cursor: zoom-out;
+    }
+
+    @media (max-width:640px) {
+      .compare {
+        grid-template-columns: 1fr;
+      }
+
+      header.hero {
+        padding: 56px 0 36px;
+      }
+    }
+
+    /* ---------- callout: the demand / an important block ---------- */
+
+    .callout {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--copy);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      margin: 0 0 14px;
+    }
+
+    .callout:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ---------- source links ---------- */
+
+    .sources {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .sources li {
+      border-top: 1px solid var(--line);
+    }
+
+    .sources li:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .sources a {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      text-decoration: none;
+      padding: 14px 4px;
+      transition: padding-left .15s ease, color .15s ease;
+    }
+
+    .sources a:hover {
+      color: var(--copy);
+      padding-left: 10px;
+    }
+
+    .sources .link-url {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      color: var(--ink-soft);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* ---------- footer ---------- */
+
+    footer {
+      padding: 36px 0 64px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--ink-soft);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--copy);
+      outline-offset: 2px;
+    }
+
+    code {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 1px 5px;
+      border-radius: 2px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <!-- ===================== HEADER (EDIT HERE) ===================== -->
+    <header class="hero">
+
+      <h1>Boss Survival Adventure (hereafter — BSA) vs Quest RPG Adventure</h1>
+      <p class="tagline">
+        Evidence and a short history of a custom game being copied, and the reason this page is being
+        published now.
+      </p>
+
+      <div class="meta-strip">
+        <div><strong>Original author (BSA)</strong><a href="https://steamcommunity.com/id/xDes_by/" target="_blank" rel="noopener">xDes</a></div>
+        <div><strong>Accused account (Quest RPG Adventure)</strong><a href="https://steamcommunity.com/id/generalDydi" target="_blank" rel="noopener">Diesel</a></div>
+      </div>
+    </header>
+    <!-- ===================== PROBLEM DESCRIPTION (EDIT HERE) ===================== -->
+    <section>
+      <p class="section-label">01 — what happened</p>
+      <h2>Problem description</h2>
+      <p>My custom game was copied without permission: code, artwork, UI visual style, gameplay, balance, quests,
+        events, localization, and more.</p>
+      <ul class="evidence-list">
+        <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1571786267/" target="_blank"
+            rel="noopener">BSA</a> was published on Nov 23, 2018, at 11:23, and has been continuously updated for
+          8 years — this is visible on its Workshop page and in the project's
+          <a href="https://discord.gg/XUsa3NquA" target="_blank" rel="noopener">Discord channel</a>.</li>
+        <li>Independent proof of authorship: BSA is mentioned in an
+          <a href="https://esports.gg/news/dota-2/valve-custom-games-negligence-sparks-protest/" target="_blank"
+            rel="noopener">esports.gg article from Apr 13, 2022</a> — two and a half years before the copy
+          appeared.</li>
+        <li><a href="https://steamcommunity.com/sharedfiles/filedetails?id=3372430522" target="_blank"
+            rel="noopener">Quest RPG Adventure</a> was published on Nov 26, 2024, at 19:01 — i.e., in late 2024,
+          as described below.</li>
+        <li>In late 2024, BSA was fully decompiled using the Source2Viewer tool and copied by the user
+          <a href="https://steamcommunity.com/id/generalDydi" target="_blank" rel="noopener">Diesel</a>
+          (Steam ID 76561198279766252), then released under his name. A copyright infringement report (#46141)
+          was filed at the time, the game was taken down for a few days, but was then restored for reasons
+          unclear to me. I couldn't pursue the matter further because I was detained in my home country for
+          political reasons and held in custody — this is confirmed by
+          <a href="https://prisoners.spring96.org/ru/person/viktar-meka" target="_blank" rel="noopener">this
+            link</a>. Now that I'm free and living in emigration, I've faced threats and various forms of
+          harassment from him. Developing games, in turn, helps me stay focused and regain a sense of control
+          over the situation, but he won't let me do that in peace, and I don't want anyone claiming credit for
+          eight years of work.</li>
+      </ul>
+    </section>
+
+    <!-- ===================== WHY NOW (EDIT HERE) ===================== -->
+    <section>
+      <p class="section-label">02 — why now</p>
+      <h2>Reason for publishing</h2>
+      <p>
+        I hadn't planned to bring this story back into the public eye. What prompted it is that the owner of
+        the copy started threatening me with counter-strikes and reports — on Steam and on Discord. This page is
+        a direct response to those threats: a full, open set of evidence that anyone can examine for themselves.
+      </p>
+      <p>
+        I (<a href="https://steamcommunity.com/id/xDes_by/" target="_blank" rel="noopener">xDes</a>) have a
+        community too: the BSA project's Discord server, with roughly 20,000 members (screenshot below). Many of
+        them remember the game's history since 2018 and can confirm the facts stated here. If that's not
+        enough — each member is free to file their own Steam report against the account that copied the game.
+      </p>
+      <div class="compare" style="grid-template-columns: 1fr;">
+        <figure>
+          <img src="images/discord.png" alt="Screenshot of the BSA Discord server member count">
+          <figcaption><span class="tag original">BSA community</span><span class="date">screenshot, ~20,000
+              members</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== EVIDENCE (EDIT HERE) ===================== -->
+    <section>
+      <p class="section-label">03 — comparison</p>
+      <h2>Evidence of copying</h2>
+      <p>Some of the original's screenshots are from 2024, since the game keeps getting updated and some
+        elements have changed since. Hover over any screenshot to see it in full.</p>
+
+      <div class="case">
+        <div class="case-title">
+          <h3>Full copy of the guild visuals and functionality</h3>
+        </div>
+        <div class="compare">
+          <figure>
+            <img src="images/guild_bsa.png" alt="Screenshot of the original">
+            <figcaption><span class="tag original">Original</span><span class="date">screenshot publish date —
+                <a href="https://discord.com/channels/559659627810390016/684096309057159184/1151140473931575347"
+                  target="_blank" rel="noopener">Discord</a></span></figcaption>
+          </figure>
+          <figure>
+            <img src="images/guild_fake.png" alt="Screenshot of the copy">
+            <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+          </figure>
+        </div>
+        <h3>Full copy of the warehouse visuals, functionality and contents</h3>
+        <div class="compare">
+          <figure>
+            <img src="images/bsa_m.png" alt="Screenshot of the original">
+            <figcaption><span class="tag original">Original</span><span class="date">May 18, 2024, 18:30</span>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="images/fake m.png" alt="Screenshot of the copy">
+            <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="case">
+        <div class="case-title">
+          <h3>Full copy of the map (only select areas shown so far, as the original keeps being updated)
+          </h3>
+        </div>
+        <div class="compare">
+          <figure>
+            <img src="images/bsa 4.png" alt="Screenshot of the original">
+            <figcaption><span class="tag original">Original</span><span class="date">Aug 13, 2026</span></figcaption>
+          </figure>
+          <figure>
+            <img src="images/fake4.png" alt="Screenshot of the copy">
+            <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="compare">
+          <figure>
+            <img src="images/bsa.png" alt="Screenshot of the original">
+            <figcaption><span class="tag original">Original</span><span class="date">Aug 13, 2026</span></figcaption>
+          </figure>
+          <figure>
+            <img src="images/fake.png" alt="Screenshot of the copy">
+            <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="compare">
+          <figure>
+            <img src="images/bsa1.png" alt="Screenshot of the original">
+            <figcaption><span class="tag original">Original</span><span class="date">Aug 13, 2026</span></figcaption>
+          </figure>
+          <figure>
+            <img src="images/fake1.png" alt="Screenshot of the copy">
+            <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="compare">
+          <figure>
+            <img src="images/bsa2.png" alt="Screenshot of the original">
+            <figcaption><span class="tag original">Original</span><span class="date">Aug 13, 2026</span></figcaption>
+          </figure>
+          <figure>
+            <img src="images/fake2.png" alt="Screenshot of the copy">
+            <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="compare">
+          <figure>
+            <img src="images/bsa3.png" alt="Screenshot of the original">
+            <figcaption><span class="tag original">Original</span><span class="date">Aug 13, 2026</span></figcaption>
+          </figure>
+          <figure>
+            <img src="images/fake3.png" alt="Screenshot of the copy">
+            <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="compare">
+          <figure>
+            <img src="images/bsa5.png" alt="Screenshot of the original">
+            <figcaption><span class="tag original">Original</span><span class="date">Aug 13, 2026</span></figcaption>
+          </figure>
+          <figure>
+            <img src="images/fake5.png" alt="Screenshot of the copy">
+            <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="compare">
+          <figure>
+            <img src="images/bsa6.png" alt="Screenshot of the original">
+            <figcaption><span class="tag original">Original</span><span class="date">Aug 13, 2026</span></figcaption>
+          </figure>
+          <figure>
+            <img src="images/fake6.png" alt="Screenshot of the copy">
+            <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <h3>The copy's files contain a cached minimap with the original BSA map and name — it could only have
+        gotten there together with the copied game files</h3>
+      <div class="compare" style="grid-template-columns: 1fr;">
+        <figure>
+          <img src="images/bsa_files.png" alt="Screenshot of the copy">
+          <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+        </figure>
+      </div>
+
+      <h3>Full copy of item and ability artwork</h3>
+      <div class="compare">
+        <figure>
+          <img src="images/bsa_items_1.png" alt="Screenshot of the original">
+          <figcaption><span class="tag original">Original</span><span class="date">May 18, 2024, 18:30</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/items_fake_1.png" alt="Screenshot of the copy">
+          <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="compare">
+        <figure>
+          <img src="images/bsa_spell_1.png" alt="Screenshot of the original">
+          <figcaption><span class="tag original">Original</span><span class="date">May 18, 2024, 18:30</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/spell_fake1.png" alt="Screenshot of the copy">
+          <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+        </figure>
+      </div>
+
+      <h3>Copied localization and descriptions — not even the title was changed</h3>
+      <div class="compare">
+        <figure>
+          <img src="images/bsa_local.png" alt="Screenshot of the original">
+          <figcaption><span class="tag original">Original</span><span class="date">May 18, 2024, 18:30</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/fake_local.png" alt="Screenshot of the copy">
+          <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+        </figure>
+      </div>
+
+      <h3>Copied code — it contains many references to my nickname
+        (<a href="https://steamcommunity.com/id/xDes_by/" target="_blank" rel="noopener">xDes</a>), used in the
+        original version's in-game events</h3>
+      <div class="compare">
+        <figure>
+          <img src="images/1.png" alt="Screenshot of the copy">
+          <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+        </figure>
+        <figure>
+          <img src="images/2.png" alt="Screenshot of the copy">
+          <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+        </figure>
+        <figure>
+          <img src="images/3.png" alt="Screenshot of the copy">
+          <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+        </figure>
+        <figure>
+          <img src="images/4.png" alt="Screenshot of the copy">
+          <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+        </figure>
+        <figure>
+          <img src="images/5.png" alt="Screenshot of the copy">
+          <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+        </figure>
+        <figure>
+          <img src="images/6.png" alt="Screenshot of the copy">
+          <figcaption><span class="tag copy">Copy</span><span class="date">Aug 13, 2026</span></figcaption>
+        </figure>
+      </div>
+
+      <h3>Confirming conversation with the person hired to copy the game</h3>
+      <div class="compare" style="grid-template-columns: 1fr;">
+        <figure>
+          <img src="images/str.png" alt="Screenshot of the conversation">
+          <figcaption><span class="tag copy">Conversation with another developer (not the thief)</span><span
+              class="date">Sep 20, 2024, 11:08</span></figcaption>
+        </figure>
+      </div>
+
+      <h3>Steam Workshop reviews calling out the theft</h3>
+      <p class="case-note">These are comments left directly on Diesel's Workshop page for Quest RPG Adventure,
+        with players calling the game stolen.</p>
+      <div class="compare" style="grid-template-columns: 1fr;">
+        <figure>
+          <img src="images/page.png" alt="Screenshot of Steam Workshop reviews calling the game stolen">
+          <figcaption><span class="tag copy">Workshop reviews</span><span class="date">screenshot</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== DMCA / COUNTER-NOTICE (EDIT HERE) ===================== -->
+    <section>
+      <p class="section-label">04 — breach of the sworn statement</p>
+      <h2>The counter-notice and its perjury clause</h2>
+      <p>
+        I have the correspondence, including the counter-notice he filed under Steam's procedure. One of the
+        mandatory clauses in such a document requires the filer to state, under penalty of perjury, that they
+        have a good-faith belief the material was removed by mistake or misidentification.
+      </p>
+      <div class="compare" style="grid-template-columns: 1fr;">
+        <figure>
+          <img src="images/not.png" alt="Screenshot of the counter-notice email">
+          <figcaption><span class="tag copy">Diesel's letter</span><span class="date">date of the letter</span></figcaption>
+        </figure>
+      </div>
+      <p>
+        The screenshots and materials collected on this page (decompiled files containing the original BSA map
+        and name, matching item and ability artwork, copied code with my nickname in it, localization copied
+        wholesale without even changing the title, and correspondence with the person hired to do the copying)
+        together show that the takedown was not a mistake or a misidentification. In my view, that means the
+        statement made under oath in the counter-notice was not true.
+      </p>
+    </section>
+
+    <!-- ===================== WHY NOT COURT (EDIT HERE) ===================== -->
+    <section>
+      <p class="section-label">05 — why not court</p>
+      <h2>Why I'm not taking this to court directly</h2>
+      <p>
+        I have neither the means nor the resources to take this to court directly. I'm living in forced
+        emigration, having left my country due to political persecution under the Lukashenko regime, and I was
+        previously deprived of my freedom for my political views (see the link above). In this situation,
+        formal legal proceedings are effectively out of reach for me, so I'm gathering and publishing the
+        evidence openly, so that anyone — Steam, Discord, or any other platform — can review the facts directly.
+      </p>
+    </section>
+
+    <!-- ===================== DEMAND (EDIT HERE) ===================== -->
+    <section>
+      <p class="section-label">06 — demand</p>
+      <h2>What I'm asking for</h2>
+      <div class="callout">
+        <p>
+          Based on the evidence presented above, I am requesting that the account of the user
+          <a href="https://steamcommunity.com/id/generalDydi" target="_blank" rel="noopener">Diesel</a>
+          (Steam ID 76561198279766252) be banned for copyright infringement and for a knowingly false statement
+          made under oath as part of the counter-notice procedure.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ===================== FOOTER (EDIT HERE) ===================== -->
+    <footer>
+      <span>Aug 13, 2026</span>
+      <span>xDes: italyevil@mail.ru</span>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
